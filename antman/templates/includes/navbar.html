@@ -1,0 +1,15 @@
+<!-- templates/includes/navbar.html -->
+{% load static %}
+      <div class="container">
+        <img src="{% static 'img/logo.png' %}" class="logo" />
+        <div class="profile-area">
+          <div class="profile">
+            <h5>{{ user_profile.user }}</h5>
+            <span class="material-icons">expand_more</span>
+          </div>
+          <button id="menu-btn">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
+      </div>
+ 

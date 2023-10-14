@@ -1,0 +1,38 @@
+   <main>
+      <aside>
+        <button id="close-btn">
+          <span class="material-icons">close</span>
+        </button>
+        <div class="sidebar">
+          <a href="{% url 'dashboard' %}" class="active">
+            <span class="material-icons">dashboard</span>
+            <h4>Dashboard</h4>
+          </a><a href="{% url 'deposit' %}" >
+            <span class="material-icons">account_balance_wallet</span>
+            <h4>Deposit</h4>
+          </a>
+          <a href="{% url 'marketplace' %}" >
+            <span class="material-icons">currency_exchange</span>
+            <h4>Marketplace</h4>
+          </a>
+          <a href="#">
+            <span class="material-icons">pie_chart</span>
+            <h4>History</h4>
+          </a>
+          <a href="#">
+            <span class="material-icons">message</span>
+            <h4>Messages</h4>
+          </a>
+
+          <a href="#">
+            <span class="material-icons">settings</span>
+            <h4>Settings</h4>
+          </a>
+          <a href="#">
+            <span class="material-icons">settings</span>
+            <h4>Logout</h4>
+          </a>
+        </div>
+        <!-- End of sidebar -->
+      </aside>
+      <!-- End of aside -->

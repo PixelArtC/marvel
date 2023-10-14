@@ -1,0 +1,760 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel - Exclusive NFT Preview</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" type="text/css" href="{% static 'index/css/style.css' %}">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@600;900&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="{% static 'index/img/logo.png' %}" width="68" height="48" alt="NFTC Logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <p class="navbar-title">Menu</p>
+
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-navlink>Home</a>
+          </li>
+          <li>
+            <a href="{% url 'dashboard' %}" class="navbar-link" data-navlink>Dashboard</a>
+          </li>
+          <li>
+            <a href="{% url 'deposit' %}" class="navbar-link" data-navlink>Deposit</a>
+          </li>
+       
+          
+      </nav>
+
+      <button class="menu-open-btn" aria-label="Open Menu" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>      <!-- 
+        - #EXPLORE
+      -->
+
+      <section class="section explore" id="explore">
+        <div class="container">
+
+       
+          <div class="title-wrapper">
+
+
+            <a href="#" class="btn-link">
+              
+            </a>
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-1.jpg' %}" width="600" height="600" loading="lazy"
+                      alt="Walking On Air" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Walking On Air</a>
+                </h3>
+
+                <span class="card-author">
+                  Exclusive <a href="#" class="author-link">Paul Rudd</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="1.5">1.5 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'nft/img/nft2.png' %}" width="600" height="600" loading="lazy" alt="Domain Names"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Quantum Guardian</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">John Deo</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="2.7">2.7 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-3.jpg' %}" width="600" height="600" loading="lazy" alt="Trading Cards"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Trading Cards</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Arham</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="2.3">2.3 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'nft/img/nft9.jpg' %}" width="600" height="600" loading="lazy"
+                      alt="Industrial Revolution" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Comic Revolution</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Marvel</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="1.8">1.8 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'nft/img/nft6.png' %}" width="600" height="600" loading="lazy" alt="Utility"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Limited Wars</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Junaid</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="1.7">1.7 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'nft/img/nft5.png' %}" width="600" height="600" loading="lazy" alt="Sports"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Mirage Master</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">ArtNox</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="1.7">1.7 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-7.jpg' %}" width="600" height="600" loading="lazy"
+                      alt="Cartoon Heroes" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Psyonix</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Junaid</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="3.2">3.2 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-8.jpg' %}" width="600" height="600" loading="lazy" alt="Gaming Chair"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Eon Enforcer</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Johnson</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="0.69">0.69 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-9.jpg' %}" width="600" height="600" loading="lazy" alt="Utility"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Thunderwing</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Junaid</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="1.7">1.7 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-10.jpg' %}" width="600" height="600" loading="lazy" alt="Sports"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Timekeeper</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">ArtNox</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="1.7">1.7 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-11.jpg' %}" width="600" height="600" loading="lazy"
+                      alt="Cartoon Heroes" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Cartoon Heroes</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Junaid</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="3.2">3.2 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{% static 'index/img/auction-12.jpg' %}" width="600" height="600" loading="lazy" alt="Gaming Chair"
+                      class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Seraphina Skye</a>
+                </h3>
+
+                <span class="card-author">
+                  Played By <a href="#" class="author-link">Johnson</a>
+                </span>
+
+                <div class="wrapper">
+                  <data class="wrapper-item" value="0.69">0.69 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div>
+
+                <button class="btn order-button">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Order Now</span>
+                </button>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TOP SELLER
+      -->
+
+      <section class="section top-seller" id="top-seller">
+        <div class="container">
+
+          <p class="section-subtitle">Creative Artist</p>
+
+          <h2 class="h2 section-title">Upcoming Shows</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{% static 'index/img/avatar-1.jpg' %}" width="64" height="64" loading="lazy" alt="Richard">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">Avengers: Legacy War</a>
+                  </h3>
+
+                  <data value="1.5">1.5 BNB</data>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{% static 'index/img/avatar-2.jpg' %}" width="64" height="64" loading="lazy" alt="John Deo">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">@Agent Carter: Time Code</a>
+                  </h3>
+
+                  <data value="2.3">2.3 BNB</data>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{% static 'index/img/avatar-3.jpg' %}" width="64" height="64" loading="lazy" alt="Junaid">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">@Mystic Realms</a>
+                  </h3>
+
+                  <data value="2.5">2.5 BNB</data>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{% static 'index/img/avatar-4.jpg' %}" width="64" height="64" loading="lazy" alt="Yasmin">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">@Inhumanity Rising</a>
+                  </h3>
+
+                  <data value="1.9">1.9 BNB</data>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{% static 'index/img/avatar-5.jpg' %}" width="64" height="64" loading="lazy" alt="Arham H">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">@ArhamH</a>
+                  </h3>
+
+                  <data value="3.2">3.2 BNB</data>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{% static 'index/img/avatar-6.jpg' %}" width="64" height="64" loading="lazy" alt="Sara">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">@Sara</a>
+                  </h3>
+
+                  <data value="4.7">4.7 BNB</data>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+          <br>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2023 <a href="#" class="copyright-link">Marvel</a>. All Rights Reserved
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-to-top" aria-label="Back to Top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="{% static 'index/js/script.js' %}"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="popup-message">Insufficient Balance.<br> Deposit to your account</span>
+      <button id="popup-close" class="btn">Close</button>
+    </div>
+  </div>
+  <script>
+  const orderButtons = document.querySelectorAll('.order-button');
+  const popup = document.getElementById('popup');
+  const popupMessage = document.getElementById('popup-message');
+  const popupCloseButton = document.getElementById('popup-close');
+
+  orderButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Here you can add your logic to check the balance and show the popup accordingly
+      // For demonstration, we'll just show the popup without balance checks
+      popup.style.display = 'block';
+    });
+  });
+
+  popupCloseButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+</script>
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 14, 14, 0.7);
+  z-index: 100;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #131316;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#popup-message {
+  margin-bottom: 20px;
+}
+
+#popup-close {
+  background: #650606;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</body>
+
+</html>

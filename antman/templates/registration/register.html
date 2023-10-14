@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #20232a; /* Dark background */
+            color: #61dafb; /* Marvel theme text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            margin-top: 2%;
+            max-width: 400px;
+            width: 100%;
+            padding: 80px;
+            background: #282c34; /* Dark background for container */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 10px; /* Rounded corners */
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px; /* Increase font size */
+            color: #ff6f61; /* Red title text */
+        }
+        form label {
+            font-weight: bold; /* Bold labels */
+            display: block; /* Each label on a new line */
+            margin-top: 15px; /* Space above labels */
+        }
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px; /* Space above input fields */
+            margin-bottom: 20px; /* Space below input fields */
+            border: 1px solid #ff6f61; /* Red input borders */
+            border-radius: 5px; /* Slightly rounded input borders */
+            color: #fff; /* White text color for input fields */
+            background: #282c34; /* Dark background for input fields */
+        }
+        .error-message {
+            color: #ff6f61; /* Red error text */
+            font-size: 16px; /* Increase error message font size */
+            margin-top: 10px; /* Space above error messages */
+        }
+        .signup-button {
+            background-color: #ff6f61; /* Red button background color */
+            color: #fff; /* White text color for the button */
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px; /* Slightly rounded button */
+            cursor: pointer;
+            font-weight: bold; /* Bold button text */
+            display: block;
+            margin: 0 auto; /* Center the button */
+            transition: background-color 0.3s; /* Smooth button color transition */
+        }
+        .signup-button:hover {
+            background-color: #e74c3c; /* Darker red on hover */
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px; /* Space between button and link */
+        }
+        .login-link a {
+            color: #61dafb; /* Marvel theme link text color */
+            text-decoration: none; /* Remove underline from the link */
+            font-weight: bold; /* Bold link text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+            <label for="{{ form.full_name.id_for_label }}">Full Name:</label>
+            {{ form.full_name }}
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+            <label for="{{ form.password1.id_for_label }}">Password:</label>
+            {{ form.password1 }}
+            <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+            {{ form.password2 }}
+            <label for="{{ form.private_key.id_for_label }}">Private Key:</label>
+            {{ form.private_key }}
+            <p class="error-message">{{ form.private_key.errors }}</p> <!-- Display private_key errors separately -->
+            {% for field in form.visible_fields %}
+                {{ field.errors | striptags }} <!-- Remove HTML tags from error messages -->
+            {% endfor %}
+            <button class="signup-button" type="submit">Sign Up</button>
+        </form>
+        <div class="login-link">
+            <a href="{% url 'login' %}">Already have an account? Login here</a>
+        </div>
+    </div>
+</body>
+</html>

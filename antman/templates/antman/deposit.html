@@ -1,0 +1,95 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}User Dashboard{% endblock %}
+
+{% block content %}
+    
+          <section class="middle" style="width:90vw">
+            <br>
+    
+        <style>
+            body {
+                text-align: center;
+            }
+    
+            .container1 {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #131316;
+                margin-left: 10%;
+                border-radius: 5%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            h1 {
+                color: #f6f1f1;
+            }
+            .ethereum-logo {
+                max-width: 8%;
+                height: 8%;
+            }
+            .ethereum-address {
+                font-size: 1.5rem;
+                margin-top: 10px;
+                color: rgb(254, 254, 254);
+                cursor: pointer;
+                max-width: 100%; /* Ensure it doesn't overflow on small screens */
+                overflow: hidden;
+                word-wrap: break-word;
+            }
+    
+            .qr-code {
+                margin-top: 20px;
+            }
+    
+            .qr-code img {
+                max-width: 40%;
+                height: 40%;
+            }
+        </style>
+        <div class="container1">
+          <img src="{% static 'img/ETH.png' %}" alt="Ethereum Logo" class="ethereum-logo">
+            <h2>Ethereum Deposit</h2> 
+            
+            <p>Send Ethereum to the following address:</p>
+            <div class="qr-code">
+              <!-- You can generate the QR code image and replace this placeholder -->
+              <img src="{% static 'img/qr.jpg' %}" alt="QR Code">
+            </div>
+           
+     
+            
+            <div class="ethereum-address" id="ethereum-address">
+            <h4>Your ETH Address</h4>
+             <code id="eth-address">
+              0xF0Ed53aeb6f7888E287eA406d06B67429e293C08
+            </code>
+                <h4>Tap Ethereum Address to Copy</h4>
+            </div>
+    
+            
+        </div>
+            
+     <script>
+            const ethereumAddress = document.getElementById("eth-address");
+    
+            ethereumAddress.addEventListener("click", function () {
+                // Create a textarea element to copy the text to the clipboard
+                const textarea = document.createElement("textarea");
+                textarea.value = ethereumAddress.textContent;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+    
+                // Display a message indicating that the address has been copied
+                ethereumAddress.textContent = "Copied!";
+                setTimeout(function () {
+                    ethereumAddress.textContent = "0x1234567890123456789012345678901234567890"; // Restore the original address
+                }, 2500); // After 3 seconds, reset the address
+            });
+        </script>
+{% endblock %}
